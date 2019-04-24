@@ -66,7 +66,7 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
-                                    <segue destination="vC3-pB-5Vb" kind="showDetail" identifier="showDetail" id="6S0-TO-JiA"/>
+                                    <segue destination="vC3-pB-5Vb" kind="showDetail" identifier="showContact" id="6S0-TO-JiA"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -290,6 +290,14 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="WGJ-2p-upt"/>
+                    <connections>
+                        <outlet property="cityLabel" destination="Bbv-HL-EBY" id="O4p-gS-ToN"/>
+                        <outlet property="emailLabel" destination="dX9-kH-byB" id="uZh-ka-aHD"/>
+                        <outlet property="phoneNumberLabel" destination="g4m-4e-gYl" id="WBt-xr-spN"/>
+                        <outlet property="stateLabel" destination="Hah-fr-0mE" id="WuQ-Kc-yWL"/>
+                        <outlet property="streetAddressLabel" destination="R1j-ne-OxT" id="bdH-j7-orV"/>
+                        <outlet property="zipLabel" destination="ief-Vz-LZq" id="Mke-jJ-wJS"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pmr-4a-uj7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
