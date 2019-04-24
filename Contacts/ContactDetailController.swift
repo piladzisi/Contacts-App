@@ -14,6 +14,9 @@ class ContactDetailController: UITableViewController {
     
     
     // Outlets
+    @IBOutlet weak var profileView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    
     @IBOutlet weak var phoneNumberLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var streetAddressLabel: UILabel!
@@ -23,11 +26,14 @@ class ContactDetailController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureView() 
+        configureView()
+        profileView.layer.cornerRadius = 50
    }
     
     func configureView() {
         guard let contact = contact else { return }
+        profileView.image = contact.image
+        nameLabel.text = "\(contact.firstName)  \(contact.lastName)"
         
         phoneNumberLabel.text = contact.phone
         emailLabel.text = contact.email
@@ -35,5 +41,6 @@ class ContactDetailController: UITableViewController {
         cityLabel.text = contact.city
         stateLabel.text = contact.state
         zipLabel.text = contact.zip
+        
     }
 }
