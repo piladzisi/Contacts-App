@@ -90,9 +90,39 @@ class ContactListController: UITableViewController {
                 
                 guard let navigationController = segue.destination as? UINavigationController, let contactDetailController = navigationController.topViewController as? ContactDetailController else { return }
             
-            contactDetailController.contact = contact
+                contactDetailController.contact = contact
+                contactDetailController.delegate = self
+                
             }
         }
     
+    }
+}
+
+extension Contact: Equatable {
+    static func ==(lhs: Contact, rhs: Contact) -> Bool {
+        return lhs.firstName == rhs.firstName && lhs.lastName == rhs.lastName && lhs.street == rhs.street && lhs.city == rhs.city && lhs.state == rhs.state && lhs.zip == rhs.zip && lhs.phone == rhs.phone && lhs.email == rhs.email
+    }
+}
+
+extension ContactListController : ContactDetailControllerDelegate {
+    func didMarkAsFavoriteContact(_ contact: Contact) {
+        var outerIndex: Int? = nil
+        var innerIndex: Int? = nil
+        
+        for (index, contacts) in sections.enumerated() {
+            if let indexOfContact = contacts.firstIndex(of: contact) {
+                outerIndex = index
+                innerIndex = indexOfContact
+                break
+            }
+        }
+        if let outerIndex = outerIndex, let innerIndex = innerIndex {
+            var favoriteContact = sections[outerIndex][innerIndex]
+            favoriteContact.isFavorite = true
+            sections[outerIndex][innerIndex] = favoriteContact
+            
+            tableView.reloadData() 
+        }
     }
 }

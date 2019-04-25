@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol ContactDetailControllerDelegate: class {
+    func didMarkAsFavoriteContact(_ contact: Contact)
+}
+
 class ContactDetailController: UITableViewController {
     
     var contact: Contact? //optional because on app load no contact to show
@@ -23,6 +27,8 @@ class ContactDetailController: UITableViewController {
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var stateLabel: UILabel!
     @IBOutlet weak var zipLabel: UILabel!
+    
+    weak var delegate: ContactDetailControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,4 +49,11 @@ class ContactDetailController: UITableViewController {
         zipLabel.text = contact.zip
         
     }
+    
+    @IBAction func markAsFavorite(_ sender: Any) {
+        
+        guard let contact = contact else { return }
+        delegate?.didMarkAsFavoriteContact(contact)
+    }
+    
 }

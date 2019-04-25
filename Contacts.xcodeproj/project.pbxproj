@@ -17,6 +17,7 @@
 		4FF6C0402270527D0040231E /* ContactListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF6C03F2270527D0040231E /* ContactListController.swift */; };
 		4FF6C042227052BF0040231E /* ContactDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF6C041227052BF0040231E /* ContactDetailController.swift */; };
 		4FF6C04422718CE20040231E /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF6C04322718CE20040231E /* ContactCell.swift */; };
+		4FF6C0462271F3F90040231E /* ContactsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF6C0452271F3F90040231E /* ContactsDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		4FF6C03F2270527D0040231E /* ContactListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListController.swift; sourceTree = "<group>"; };
 		4FF6C041227052BF0040231E /* ContactDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailController.swift; sourceTree = "<group>"; };
 		4FF6C04322718CE20040231E /* ContactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
+		4FF6C0452271F3F90040231E /* ContactsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				4FF6C03F2270527D0040231E /* ContactListController.swift */,
 				4FF6C041227052BF0040231E /* ContactDetailController.swift */,
 				4FF6C04322718CE20040231E /* ContactCell.swift */,
+				4FF6C0452271F3F90040231E /* ContactsDataSource.swift */,
 			);
 			path = Contacts;
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FF6C0462271F3F90040231E /* ContactsDataSource.swift in Sources */,
 				4FF6C04422718CE20040231E /* ContactCell.swift in Sources */,
 				4FF6C03E227049B60040231E /* Contact.swift in Sources */,
 				4FF6C042227052BF0040231E /* ContactDetailController.swift in Sources */,
