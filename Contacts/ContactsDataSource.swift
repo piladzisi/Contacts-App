@@ -49,7 +49,11 @@ class ContactsDataSource: NSObject, UITableViewDataSource {
         
         if contact.isFavorite {
             contactCell.favoriteView.image = #imageLiteral(resourceName: "Star")
+        } else {
+            contactCell.favoriteView.image = nil
         }
+        
+        print("isFavorite:\(contact.isFavorite), section: \(indexPath.section), row: \(indexPath.row)")
         return contactCell
     }
     
