@@ -19,7 +19,7 @@ struct Contact {
     let state: String
     let zip: String
     let image: UIImage?
-    var favorite: Bool
+    var isFavorite: Bool
 }
 
 extension Contact {
@@ -61,7 +61,7 @@ extension Contact {
             image = nil
         }
         
-        favorite = false
+        isFavorite = false
     }
 }
 
