@@ -63,6 +63,7 @@ class ContactListController: UITableViewController {
         let contact = sections[indexPath.section][indexPath.row]
         
         contactCell.profileImageView.image = contact.image
+        contactCell.profileImageView.layer.cornerRadius = 30
         contactCell.nameLabel.text = contact.firstName
         contactCell.cityLabel.text = contact.city
         
